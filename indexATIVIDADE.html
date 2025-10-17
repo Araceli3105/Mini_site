@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>FUNCERN</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5fff5;
+    }
+
+    .caixa {
+      border: 2px solid lightgreen;
+      background-color: #eaffea;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      background-color: #33cc66;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2ba357;
+    }
+
+    #conteudo {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>FUNCERN</h1>
+  <p>Área do candidato.</p>
+  <p>Siga abaixo</p>
+
+  <div class="caixa">
+    <h3>Seus Dados</h3>
+
+    <!-- Botões -->
+    <button onclick="mostrarMensagem(1)">Edital</button>
+    <button onclick="mostrarMensagem(2)">Resultado</button>
+    <button onclick="mostrarMensagem(3)">Informações</button>
+
+    <div id="conteudo">Clique em um dos botões acima.</div>
+
+    <p><strong>Número de inscrição:</strong> 29750110</p>
+  </div>
+
+  <p>funcern.com</p>
+
+  <script>
+    function mostrarMensagem(link) {
+      let texto = "";
+
+      if (link === 1) {
+        texto = "EDITAL: Oferta em Apodi, Caicó, Canguaretama, Mossoró, Currais Novos, Jucurutu";
+      } else if (link === 2) {
+        texto = "Seu resultado: 31 questões. Redação: 85";
+      } else if (link === 3) {
+        texto = "Local da prova: Campus Jucurutu/RN. DATA: 10/11. HORÁRIO: 13:00";
+      }
+
+      document.getElementById("conteudo").innerText = texto;
+    }
+  </script>
+</body>
+</html>
